@@ -82,6 +82,7 @@ public class UserRegistration {
             System.out.println("Password is Invalid");
 	}
 	
+	
     public void listOfEmailValidation() {
         sc = new Scanner(System.in);
         final String emailPattern = "^[a-zA-Z0-9]{1,}[.+-]?[a-zA-Z0-9]{1,}?[@][a-zA-Z0-9]{1,}([.][a-zA-Z]{2,}){1,2}$";
@@ -93,7 +94,7 @@ public class UserRegistration {
         
         if (resultForListOfEmail)
             System.out.println("Email ID is acceptable.");
-        if (!resultForListOfEmail)
+        else
             System.out.println("Email ID is not acceptable.");
     }
 }
