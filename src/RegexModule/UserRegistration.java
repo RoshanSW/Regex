@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 public class UserRegistration {		
 	Scanner sc;
 	
-	public void nameValidation() {		
+	public void nameValidation() {	
+
 		sc = new Scanner(System.in);			
 		final String textPattern = "(^[A-Z][a-z]{2,})";
 		
@@ -31,6 +32,7 @@ public class UserRegistration {
 	}
 	
 	public void eMailValidation () {
+		
         sc = new Scanner(System.in);
         final String emailPattern = "[a-zA-Z1-9]+([.]xyz|)+@bl+[.]co([.]in|)";
         System.out.print("Enter email address to validate : ");        
@@ -47,7 +49,7 @@ public class UserRegistration {
         }
     }
 	
-	 public void phoneNumberValidation() {
+	public void phoneNumberValidation() {
         sc = new Scanner(System.in);
         final String phoneNumberPattern = "[0-9]{2}+(\\s)+[6-9][0-9]{9}";
         
@@ -60,11 +62,14 @@ public class UserRegistration {
             System.out.println("Phone Number is Valid");
         else
             System.out.println("Phone Number is Invalid");
-	    }
+	}
 
-	 public void passwordValidation() {
+
+	public void passwordValidation() {
         sc = new Scanner(System.in);
-        final String passwordPattern = "(?=.*?[A-Z]).{8,}";
+        
+        System.out.println("Password must contain minimun 8 char, one uppers case text and number ");
+        final String passwordPattern = "(?=.*?[A-Z])(?=.*[0-9])(?=.{8,})[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*";
         
         System.out.print("Enter password to validate : ");
         String password = sc.nextLine();
@@ -74,5 +79,5 @@ public class UserRegistration {
             System.out.println("Password is Valid");
         else
             System.out.println("Password is Invalid");
-	    }
+	}
 }
