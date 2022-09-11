@@ -5,18 +5,26 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {	
 	
-	public void firstNameValidate() {
+	public void nameValidation() {
 		Scanner sc = new Scanner(System.in);		
-		final String regexFistName = "(^[A-Z][a-z]{3,})";
-		System.out.print("Enter the FirstName to validate : ");
+		final String textRegexValidation = "(^[A-Z][a-z]{2,})";
+		System.out.print("Enter the FirstName and LastName to validate : ");
         String firstName = sc.nextLine();
-        boolean resultForFirstName = Pattern.matches(regexFistName, firstName);
-        if (resultForFirstName) {
+        String lastName = sc.nextLine();
+        
+        boolean resultForFirstName = Pattern.matches(textRegexValidation, firstName);
+        boolean resultForLastName = Pattern.matches(textRegexValidation, lastName);
+        
+        if (resultForFirstName && resultForLastName) {
             System.out.println("First Name is valid and acceptable.");
         }
-        else {
+        else if(!resultForFirstName) {
             System.out.println("Enter valid First Name");
-            firstNameValidate();
+            nameValidation();
+        }
+        else if(!resultForLastName) {
+            System.out.println("Enter valid First Name");
+            nameValidation();
         }
 	}	
 
