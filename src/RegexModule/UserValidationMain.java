@@ -22,8 +22,7 @@ public class UserValidationMain {
                 case 5 -> ur.listOfEmailValidation();
                 case 9 -> loop = false;
             }
-        }		
-
+        }
 	}
 
 }
