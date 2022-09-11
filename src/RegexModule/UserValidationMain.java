@@ -6,7 +6,8 @@ public class UserValidationMain {
 		UserRegistration ur = new UserRegistration();
 //		ur.nameValidation();
 //		ur.eMailValidation(); 
-		ur.phoneNumberValidation();
+//		ur.phoneNumberValidation();
+		ur.passwordValidation();
 	}
 
 }

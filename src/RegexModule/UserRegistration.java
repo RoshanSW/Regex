@@ -9,6 +9,7 @@ public class UserRegistration {
 	public void nameValidation() {		
 		sc = new Scanner(System.in);			
 		final String textPattern = "(^[A-Z][a-z]{2,})";
+		
 		System.out.print("Enter the FirstName and LastName to validate : ");
         String firstName = sc.nextLine();
         String lastName = sc.nextLine();
@@ -61,4 +62,17 @@ public class UserRegistration {
             System.out.println("Phone Number is Invalid");
 	    }
 
+	 public void passwordValidation() {
+        sc = new Scanner(System.in);
+        final String passwordPattern = ".{8,}";
+        
+        System.out.print("Enter password to validate : ");
+        String password = sc.nextLine();
+        
+        boolean resultForPasswordValidation = Pattern.matches(passwordPattern, password);
+        if (resultForPasswordValidation)
+            System.out.println("Password is Valid");
+        else
+            System.out.println("Password is Invalid");
+	    }
 }
