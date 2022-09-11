@@ -75,9 +75,25 @@ public class UserRegistration {
         String password = sc.nextLine();
         
         boolean resultForPasswordValidation = Pattern.matches(passwordPattern, password);
+        
         if (resultForPasswordValidation)
             System.out.println("Password is Valid");
         else
             System.out.println("Password is Invalid");
 	}
+	
+    public void listOfEmailValidation() {
+        sc = new Scanner(System.in);
+        final String emailPattern = "^[a-zA-Z0-9]{1,}[.+-]?[a-zA-Z0-9]{1,}?[@][a-zA-Z0-9]{1,}([.][a-zA-Z]{2,}){1,2}$";
+        
+        System.out.print("Enter Email from List to validate: ");
+        String email = sc.nextLine();
+        
+        boolean resultForListOfEmail = Pattern.matches(emailPattern, email);
+        
+        if (resultForListOfEmail)
+            System.out.println("Email ID is acceptable.");
+        if (!resultForListOfEmail)
+            System.out.println("Email ID is not acceptable.");
+    }
 }

@@ -7,7 +7,8 @@ public class UserValidationMain {
 //		ur.nameValidation();
 //		ur.eMailValidation(); 
 //		ur.phoneNumberValidation();
-		ur.passwordValidation();
+//		ur.passwordValidation();
+		ur.eMailValidation();
 	}
 
 }
